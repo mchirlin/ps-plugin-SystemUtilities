@@ -1,0 +1,75 @@
+<appian-plugin name="Content Expressions"
+	key="com.appiancorp.ps.plugins.systemutilities">
+
+	<plugin-info>
+		<description>Content Expressions</description>
+		<vendor name="Appian Corporation" url="http://www.appian.com" />
+		<version>1.1.1</version>
+		<application-version min="6.5" />
+	</plugin-info>
+
+	<!-- Function Category -->
+	<function-category key="customContentFunctionsCategory"
+		name="Custom Content Functions" />
+
+	<!-- Data Types -->
+	<datatype key="ProcessModelSettings" name="Process Model Settings Data Type">
+		<class>com.appiancorp.ps.plugins.systemutilities.processmodels.ProcessModelSettings
+		</class>
+	</datatype>
+
+	<!-- Folder Utilities -->
+	<function key="getSubfoldersFromFolder"
+		class="com.appiancorp.ps.plugins.systemutilities.folders.GetSubfoldersFromFolder" />
+	<function key="findFoldersByName"
+		class="com.appiancorp.ps.plugins.systemutilities.folders.FindFoldersByName" />
+	<function key="setFolderSearchability"
+		class="com.appiancorp.ps.plugins.systemutilities.folders.SetFolderSearchability" />
+	<function key="getFolderSearchability"
+		class="com.appiancorp.ps.plugins.systemutilities.folders.GetFolderSearchability" />
+	<function key="searchFolders"
+		class="com.appiancorp.ps.plugins.systemutilities.folders.SearchFolders" />
+	<smart-service name="Rules Folder Renamer" key="rulesFolderRenamer"
+		class="com.appiancorp.ps.plugins.systemutilities.folders.RulesFolderRenamer" />
+
+	<!-- Document Utilities -->
+	<function key="findDocumentsByName"
+		class="com.appiancorp.ps.plugins.systemutilities.documents.FindDocumentsByName" />
+	<function key="getDocumentsFromFolder"
+		class="com.appiancorp.ps.plugins.systemutilities.documents.GetDocumentsFromFolder" />
+	<function key="getLogFileNames"
+		class="com.appiancorp.ps.plugins.systemutilities.documents.GetLogFileNames" />
+	<smart-service name="Generate Log Files" key="getLogFiles"
+		class="com.appiancorp.ps.plugins.systemutilities.documents.GetLogFileSmartService" />
+
+	<!-- Rules Utilities -->
+	<function key="searchRulesAndConstants"
+		class="com.appiancorp.ps.plugins.systemutilities.rules.SearchRulesAndConstants" />
+	<smart-service name="Rules and Constants Renamer" key="rulesAndConstantsRenamer"
+		class="com.appiancorp.ps.plugins.systemutilities.rules.RulesAndConstantsRenamer" />
+
+	<!-- Process Model Utilities -->
+	<function key="getProcessModelDetailsByUUID"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.ProcessModelByUUIDDetailsRetriever" />
+	<function key="getProcessModelNameFromID"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetProcessModelNameFromID" />
+	<function key="getProcessModelsByFolder"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetProcessModelsByFolder" />
+	<function key="getProcessModelFoldersByFolder"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetProcessModelFoldersByFolder" />
+	<function key="getTopLevelProcessModelFolders"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetTopLevelProcessModelFolders" />
+	<function key="getProcessModelSettings"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetProcessModelsSettings" />
+	<smart-service name="Set Process Model Information" key="setProcessModelSettings"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.SetProcessModelsSettings" />
+
+	<!-- Generic Content Utilities -->
+	<function key="getNameFromUuid"
+		class="com.appiancorp.ps.plugins.systemutilities.GetNameFromUuid" />
+	<function key="getContentDetailsByUUID"
+		class="com.appiancorp.ps.plugins.systemutilities.ContentByUUIDDetailsRetriever" />
+	<function key="getContentObjectDetailsByID"
+		class="com.appiancorp.ps.plugins.systemutilities.ContentDetailsByIDRetriever" />
+
+</appian-plugin>
