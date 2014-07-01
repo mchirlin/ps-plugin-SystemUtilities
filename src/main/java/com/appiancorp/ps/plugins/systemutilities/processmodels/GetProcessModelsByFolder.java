@@ -42,10 +42,17 @@ public class GetProcessModelsByFolder {
 			processModels = new LabelValue[pmds.length];
 			for (int i = 0; i < pmds.length; i++) {
 				LabelValue lv = new LabelValue();
+				
+				// Set Label as Name
 				lv.setLabel(pmds[i].getName().get(sc.getLocale()));
+				
+				// Set Values as UUID, ID, Description
 				List<Object> value = new ArrayList<Object>();
+				value.add(pmds[i].getUuid());
 				value.add(pmds[i].getId());
 				value.add(pmds[i].getDescription().get(sc.getLocale()));
+				value.add(" ");
+				value.add(" ");
 				lv.setValue(value);
 				processModels[i] = lv;
 			}

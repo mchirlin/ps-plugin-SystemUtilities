@@ -44,7 +44,11 @@ public class SearchRulesAndConstants {
 			rules = new LabelValue[content.length];
 			for (int i = 0; i < content.length; i++) {
 				LabelValue lv = new LabelValue();
+				
+				// Set Label as Name
 				lv.setLabel(content[i].getName());
+				
+				// Set Values as UUID
 				List<Object> value = new ArrayList<Object>();
 				value.add(content[i].getUuid());
 				lv.setValue(value);

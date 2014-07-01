@@ -47,12 +47,12 @@
 		class="com.appiancorp.ps.plugins.systemutilities.rules.SearchRulesAndConstants" />
 	<smart-service name="Rules and Constants Renamer" key="rulesAndConstantsRenamer"
 		class="com.appiancorp.ps.plugins.systemutilities.rules.RulesAndConstantsRenamer" />
+	<smart-service name="Update Expression Rule" key="updateExpressionRule"
+		class="com.appiancorp.ps.plugins.systemutilities.rules.UpdateExpressionRule" />
 
 	<!-- Process Model Utilities -->
-	<function key="getProcessModelDetailsByUUID"
-		class="com.appiancorp.ps.plugins.systemutilities.processmodels.ProcessModelByUUIDDetailsRetriever" />
-	<function key="getProcessModelNameFromID"
-		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetProcessModelNameFromID" />
+	<function key="getProcessModelByUUID"
+		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetProcessModelByUUID" />
 	<function key="getProcessModelsByFolder"
 		class="com.appiancorp.ps.plugins.systemutilities.processmodels.GetProcessModelsByFolder" />
 	<function key="getProcessModelFoldersByFolder"
@@ -65,11 +65,15 @@
 		class="com.appiancorp.ps.plugins.systemutilities.processmodels.SetProcessModelsSettings" />
 
 	<!-- Generic Content Utilities -->
-	<function key="getNameFromUuid"
-		class="com.appiancorp.ps.plugins.systemutilities.GetNameFromUuid" />
-	<function key="getContentDetailsByUUID"
-		class="com.appiancorp.ps.plugins.systemutilities.ContentByUUIDDetailsRetriever" />
-	<function key="getContentObjectDetailsByID"
-		class="com.appiancorp.ps.plugins.systemutilities.ContentDetailsByIDRetriever" />
+	<function key="getContentByUUID"
+		class="com.appiancorp.ps.plugins.systemutilities.GetContentByUUID" />
+	<function key="getContentByID"
+		class="com.appiancorp.ps.plugins.systemutilities.GetContentByID" />
+		
+	<!-- Expression Utilities -->
+	<function key="internalizeExpression"
+		class="com.appiancorp.ps.plugins.systemutilities.expression.InternalizeExpression" />
+	<function key="externalizeExpression"
+		class="com.appiancorp.ps.plugins.systemutilities.expression.ExternalizeExpression" />
 
 </appian-plugin>

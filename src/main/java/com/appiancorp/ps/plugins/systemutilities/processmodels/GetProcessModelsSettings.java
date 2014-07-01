@@ -34,7 +34,7 @@ public class GetProcessModelsSettings {
 	private static final Logger LOG = Logger.getLogger(GetProcessModelsSettings.class);
 
 	@Function
-	@Type(name="UTIL_ProcessModelSettings", namespace="http://plugins.cloud.appiancorp.com/suite/types/")
+	@Type(name="UTIL_ProcessModelSettings", namespace="http://plugins.ps.appiancorp.com/suite/types/")
 	public ProcessModelSettings[] getProcessModelSettings(
 			ServiceContext sc,
 			ProcessDesignService pds,

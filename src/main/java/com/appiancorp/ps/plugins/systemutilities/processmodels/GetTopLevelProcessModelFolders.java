@@ -44,11 +44,17 @@ public class GetTopLevelProcessModelFolders {
 			folders = new LabelValue[fs.length];
 			for (int i = 0; i < fs.length; i++) {
 				LabelValue lv = new LabelValue();
+				
+				// Set Label as Name
 				lv.setLabel(fs[i].getName());
+				
+				// Set Values as UUID, ID, Description, Number of Models, Type
 				List<Object> value = new ArrayList<Object>();
-				value.add("Folder");
+				value.add(fs[i].getUuid());
 				value.add(fs[i].getId());
+				value.add(fs[i].getDescription());
 				value.add(fs[i].getNumberOfProcessModels());
+				value.add("Folder");
 				lv.setValue(value);
 				folders[i] = lv;
 			}

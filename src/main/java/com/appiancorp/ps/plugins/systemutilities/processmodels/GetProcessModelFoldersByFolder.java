@@ -43,12 +43,19 @@ public class GetProcessModelFoldersByFolder {
 			processModelFolders = new LabelValue[pmfs.length];
 			for (int i = 0; i < pmfs.length; i++) {
 				LabelValue lv = new LabelValue();
+				
+				// Set Label as Name
 				lv.setLabel(pmfs[i].getName());
+				
+				// Set Values as UUID, ID, Description, Number of Models, Type
 				List<Object> value = new ArrayList<Object>();
-				value.add("Folder");
+				value.add(pmfs[i].getUuid());
 				value.add(pmfs[i].getId());
+				value.add(pmfs[i].getDescription());
 				value.add(pmfs[i].getNumberOfProcessModels());
+				value.add("Folder");
 				lv.setValue(value);
+				
 				processModelFolders[i] = lv;
 			}
 		}
