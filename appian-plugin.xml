@@ -4,7 +4,7 @@
 	<plugin-info>
 		<description>Content Expressions</description>
 		<vendor name="Appian Corporation" url="http://www.appian.com" />
-		<version>1.1.1</version>
+		<version>1.2.0</version>
 		<application-version min="6.5" />
 	</plugin-info>
 
