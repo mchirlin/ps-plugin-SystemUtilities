@@ -47,6 +47,8 @@
 		class="com.appiancorp.ps.plugins.systemutilities.rules.SearchRulesAndConstants" />
 	<smart-service name="Rules and Constants Renamer" key="rulesAndConstantsRenamer"
 		class="com.appiancorp.ps.plugins.systemutilities.rules.RulesAndConstantsRenamer" />
+	<smart-service name="Rules and Constants Copier" key="rulesAndConstantsCopier"
+		class="com.appiancorp.ps.plugins.systemutilities.rules.RulesAndConstantsCopier" />
 	<smart-service name="Update Expression Rule" key="updateExpressionRule"
 		class="com.appiancorp.ps.plugins.systemutilities.rules.UpdateExpressionRule" />
 

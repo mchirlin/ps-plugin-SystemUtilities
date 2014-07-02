@@ -33,7 +33,7 @@ public class GetContentByID {
 			// Set Label as Name
 			lv.setLabel(content.getName());
 
-			// Set Values as UUID, ID, Description, Parent Name, Parent ID, Type
+			// Set Values as UUID, ID, Description, Parent Name, Parent ID, Type, (Doc) Internal Filename
 			List<Object> value = new ArrayList<Object>();
 			value.add(content.getUuid());
 			value.add(content.getId());
@@ -41,6 +41,7 @@ public class GetContentByID {
 			value.add(content.getParentName());
 			value.add(content.getParent());
 			value.add(ContentUtils.getContentObjectType(content.getType()));
+			if (content.getType().equals(ContentConstants.TYPE_DOCUMENT)) value.add(cs.getInternalFilename(id));
 			lv.setValue(value);
 
 			return lv;

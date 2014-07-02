@@ -49,6 +49,7 @@ public class GetContentByUUID {
 				value.add(" ");
 				value.add(" ");
 				value.add(type);
+				value.add(" ");
 				lv.setValue(value);
 
 				return lv;
@@ -68,6 +69,7 @@ public class GetContentByUUID {
 			value.add(content.getParentName());
 			value.add(content.getParent());
 			value.add(ContentUtils.getContentObjectType(content.getType()));
+			if (content.getType().equals(ContentConstants.TYPE_DOCUMENT)) value.add(cs.getInternalFilename(id));
 			lv.setValue(value);
 			
 			return lv;
