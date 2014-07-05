@@ -1,0 +1,30 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="$datatype.namespace" targetNamespace="$datatype.namespace" #foreach( $includeNamespace in $datatype.includeNamespaces) $includeNamespace #end>
+#foreach( $include in $datatype.includes)
+  	$include
+#end
+  <xsd:complexType name="$datatype.name">
+    <xsd:annotation>
+      <xsd:documentation>$datatype.description</xsd:documentation>
+      <xsd:appinfo source="appian.jpa">
+#foreach( $annotation in $datatype.annotations)
+          $annotation
+#end  
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+#set( $count = 0 )
+#foreach( $element in $datatype.elements )
+      <xsd:element name="$datatype.getElementName($count)" type="$datatype.getElementType($count)"#if( $datatype.getElementHasMaxOccurs($count)) maxOccurs="$datatype.getElementMaxOccurs($count)"#end#if( $datatype.getElementHasMinOccurs($count) ) minOccurs="$datatype.getElementMinOccurs($count)"#end#if( $datatype.getElementNillable($count) ) nillable="true"#else nillable="false"#end>
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+#foreach( $annotation in $datatype.getElementAnnotations($count) )
+		  	$annotation
+#end
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+#set( $count = $count + 1 )
+#end
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
