@@ -64,7 +64,7 @@ public class ProcessModelSettings implements Serializable {
 	    setAlerts(alerts);
 	  }
 
-  public ProcessModelSettings() {} // for serialization only
+  public ProcessModelSettings() {}
 
   @Id
   @XmlElement

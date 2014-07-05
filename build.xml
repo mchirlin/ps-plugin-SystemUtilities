@@ -29,6 +29,7 @@
       </fileset>
       <fileset dir="./src/main/resources">
         <include name="**/*.gif"/>
+      	<include name="**/*.htm"/>
       </fileset>
       <fileset dir="./tmp">
         <include name="**/*.java"/>
