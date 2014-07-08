@@ -49,10 +49,10 @@ public class Constants {
 
 	static  {
 		ORACLE_DATA_TYPES = new HashMap<String, String>();
-		ORACLE_DATA_TYPES.put("NUMBER(19,0)", "xsd:long");
+		ORACLE_DATA_TYPES.put("NUMBER(19,0)", "xsd:int"); //xsd:long
 		ORACLE_DATA_TYPES.put("NUMBER(10,0)", "xsd:int");
-		ORACLE_DATA_TYPES.put("NUMBER(19,2)", "xsd:decimal");
-		ORACLE_DATA_TYPES.put("NUMBER", "xsd:decimal");
+		ORACLE_DATA_TYPES.put("NUMBER(19,2)", "xsd:double"); //xsd:decimal
+		ORACLE_DATA_TYPES.put("NUMBER", "xsd:double"); //xsd:decimal
 		ORACLE_DATA_TYPES.put("NUMBER(1,0)", "xsd:boolean");
 		ORACLE_DATA_TYPES.put("VARCHAR2", "xsd:string");
 		ORACLE_DATA_TYPES.put("TIMESTAMP", "xsd:dateTime");
@@ -60,14 +60,14 @@ public class Constants {
 		ORACLE_DATA_TYPES.put("FLOAT", "xsd:double");
 
 		MYSQL_DATA_TYPES = new HashMap<String, String>();
-		MYSQL_DATA_TYPES.put("bigint", "xsd:long");
+		MYSQL_DATA_TYPES.put("bigint", "xsd:int"); //xsd:long
 		MYSQL_DATA_TYPES.put("integer", "xsd:int");
 		MYSQL_DATA_TYPES.put("int", "xsd:int");
-		MYSQL_DATA_TYPES.put("decimal", "xsd:decimal");
+		MYSQL_DATA_TYPES.put("decimal", "xsd:double"); //xsd:decimal
 		MYSQL_DATA_TYPES.put("tinyint", "xsd:boolean");
 		MYSQL_DATA_TYPES.put("varchar", "xsd:string");
 		MYSQL_DATA_TYPES.put("datetime", "xsd:dateTime");
 		MYSQL_DATA_TYPES.put("date", "xsd:date");
-		MYSQL_DATA_TYPES.put("float", "xsd:float");
+		MYSQL_DATA_TYPES.put("float", "xsd:float"); //xsd:float
 	}
 }

@@ -29,7 +29,9 @@
 	<function key="getDatatypeByID"
 		class="com.appiancorp.ps.plugins.systemutilities.data.GetDatatypeByID" />
 	<function key="createXsdFromDatatype"
-		class="com.appiancorp.ps.plugins.systemutilities.data.CreateXsdFromDatatype" />	
+		class="com.appiancorp.ps.plugins.systemutilities.data.CreateXsdFromDatatype" />
+	<function key="convertDdlToDatatype"
+		class="com.appiancorp.ps.plugins.systemutilities.data.ConvertDdlToDatatype" />
 
 	<!-- Folder Utilities -->
 	<function key="getSubfoldersFromFolder"

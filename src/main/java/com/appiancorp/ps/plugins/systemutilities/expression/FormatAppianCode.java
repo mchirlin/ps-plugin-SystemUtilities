@@ -28,19 +28,19 @@ public class FormatAppianCode {
 		LOG.debug("Formatting Appian Code: *" + input + "*");
 		try {
 			String indented = input
-					.replaceAll("\\s+", "")
+					.replaceAll("\\s+", " ")
+					.replaceAll("\\((?![\\s]*\\))", "(\n")
+					.replaceAll("\\{(?![\\s]*\\})", "{\n")
 					.replace(",", ",\n")
 					.replace(")", "\n)")
-					.replace("}", "\n}")
-					.replace("(", "(\n")
-					.replace("{", "{\n");
-
+					.replace("}", "\n}");
+			
 			Pattern p = Pattern.compile(".*");
 			Matcher m = p.matcher(indented);
 			StringBuffer sb = new StringBuffer();
 			int count = 0;
 			while(m.find()) {
-				if(!m.group().isEmpty()) {
+				if(!m.group().trim().isEmpty()) {
 					// Calculate how many tabs to add
 					Integer openParenths = StringUtils.countMatches(indented.substring(0, m.start()), "(");
 					Integer closedParenths = StringUtils.countMatches(indented.substring(0, m.start()), ")");
@@ -55,9 +55,9 @@ public class FormatAppianCode {
 					}
 					
 					// Add space after colons
-					String group = m.group().replace(":", ": ");
-					
-					m.appendReplacement(sb, tabs + group);
+					String group = Matcher.quoteReplacement(m.group().trim());
+					LOG.debug(group);
+					if(!group.isEmpty()) m.appendReplacement(sb, tabs + group);
 				}
 			}
 			m.appendTail(sb);
