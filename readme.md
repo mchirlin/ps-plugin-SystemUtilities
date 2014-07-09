@@ -18,16 +18,18 @@ Various Utilities include
   - Convert DDL to Datatype
   - Grab Log Files
 
-Version
+Appian Version
 ----
 
-1.3.0
+7.5.0
 
 Required Plugins
 -----------
 
 * [Legacy Forms Designer to SAIL Form] - returns SAIL Form text that you can then copy into your own rules.
 * [Portal to SAIL] - provides functions to retrieve portal report data for use in Tempo Records, Tempo Reports and processes.
+* System Utilities - provides various system utilities, eg. updating process model settings, searching for rules folders, getting top level process model folders, etc.
+
 
 Replaces Plugins
 --------------
