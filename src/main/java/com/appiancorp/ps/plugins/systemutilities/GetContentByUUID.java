@@ -25,7 +25,6 @@ public class GetContentByUUID {
 	@Function
 	public LabelValue getContentByUUID(ServiceContext sc, ContentService cs,
 			ProcessDesignService pds, @Parameter String objectUUID) {
-		String objectInformation = new String("Content Object [");
 		String deleteObjectName;
 		try {
 			Long id = cs.getIdByUuid(objectUUID);
